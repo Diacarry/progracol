@@ -13,13 +13,13 @@
                 @endauth
             </div>
         @endif
-        <div class="content">
-            <div class="title m-b-md">
-                PROGRACOL TEST
+        <div class="text-center"><br>
+            <div class="">
+                <h2>PROGRACOL TEST</h2>
                 <h6>{{ $Name }}</h6>
             </div>
-            <div class="links">
-                <a href="">Haga Click Aquí</a>
+            <div class="">
+                <a href="/tickets">Haga Click Aquí</a>
             </div>
         </div>
     </div>
