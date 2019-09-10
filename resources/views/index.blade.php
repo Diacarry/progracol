@@ -82,7 +82,7 @@
             <div class="content">
                 <div class="title m-b-md">
                     PROGRACOL TEST
-                    <h6>Andres Carranza</h6>
+                    <h6>{{ $Name }}</h6>
                 </div>
 
                 <div class="links">
