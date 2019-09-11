@@ -12,7 +12,7 @@ class RenameTicketPriorityTable extends Migration {
      */
     public function up() {
         Schema::table('ticket_priority', function (Blueprint $table) {
-            $table->index('id');//priority_id
+            $table->index('priority_id');
         });
     }
 

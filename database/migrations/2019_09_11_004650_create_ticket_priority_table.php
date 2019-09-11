@@ -12,7 +12,7 @@ class CreateTicketPriorityTable extends Migration {
      */
     public function up() {
         Schema::create('ticket_priority', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('priority_id');
             $table->timestamps();
 
             $table->string('label');
