@@ -18,8 +18,11 @@
                 <h2>PROGRACOL TEST</h2>
                 <h6>{{ $Name }}</h6>
             </div>
-            <div class="">
-                <a href="/tickets">Haga Click Aquí</a>
+            <div>
+                <a href="/users">Registrar Usuarios</a>
+            </div>
+            <div>
+                <a href="/tickets">Gestionar Tickets</a>
             </div>
         </div>
     </div>

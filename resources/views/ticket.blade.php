@@ -1,7 +1,7 @@
 @extends('layouts.blank')
 @section('content')
-    <h3>FORMULARIO <small><a href="/">Volver</a></small> </h3>
-    <form>
+    <h3>FORMULARIO -> <small><a href="/">Volver</a></small> </h3>
+    <form action="/users/{$id}">
         <div class="form-group row col-md-4">
         <label class="col-sm-2 col-form-label">User</label>
             <div class="col-sm-10">

@@ -16,3 +16,7 @@ Route::get('/', 'PagesController@home');
 Route::get('/index', 'PagesController@home');
 
 Route::get('/tickets', 'PagesController@tickets');
+
+Route::get('/register', 'PagesController@register');
+
+Route::post('/register/create', 'PagesController@create');
