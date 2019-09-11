@@ -19,7 +19,7 @@
                 <h6>{{ $Name }}</h6>
             </div>
             <div>
-                <a href="/users">Registrar Usuarios</a>
+                <a href="/users/create">Registrar Usuarios</a>
             </div>
             <div>
                 <a href="/tickets">Gestionar Tickets</a>

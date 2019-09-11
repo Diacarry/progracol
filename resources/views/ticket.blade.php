@@ -21,31 +21,24 @@
         <thead>
             <tr>
             <th scope="col">ID</th>
-            <th scope="col">Subject</th>
-            <th scope="col">Description</th>
-            <th scope="col">Prioridad</th>
-            <th scope="col">Acciones</th>
+            <th scope="col">Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Hours days</th>
             </tr>
         </thead>
         <tbody>
             @forelse($data as $info)
                 <tr>
                     <th>{{ $info->user_id }}</th>
-                    <td>{{ $info->email }}</td>
                     <td>{{ $info->name }}</td>
-                    <td>Otto</td>
-                    <td>Hulk</td>
+                    <td>{{ $info->last_name }}</td>
+                    <td>{{ $info->email }}</td>
+                    <td>{{ $info->hours_days }}</td>
                 </tr>
             @empty
                 <tr>NO HAY DATA</tr>
             @endforelse
-            <tr>
-                <th scope="row">3</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-            </tr>
         </tbody>
     </table>
     <p class="text-center">Tiempo estimado de solución (5 dias, 2 horas)</p>
