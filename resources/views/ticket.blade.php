@@ -12,7 +12,7 @@
             </div>
         </div>
     </form>
-    <h3>Lista de tidkets por usuario</h3>
+    <h3>Lista de ticket's por usuario</h3>
     <table class="table">
         <thead>
             <tr>
@@ -24,26 +24,23 @@
             </tr>
         </thead>
         <tbody>
+            @forelse($msgs as $msg)
+                <tr>
+                    <th>{{ $msg['id'] }}</th>
+                    <td>{{ $msg['content'] }}</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>Hulk</td>
+                </tr>
+            @empty
+                <tr>NO HAY DATA</tr>
+            @endforelse
             <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            </tr>
-            <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>@mdo</td>
-            </tr>
-            <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-            <td>@mdo</td>
+                <th scope="row">3</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
             </tr>
         </tbody>
     </table>
