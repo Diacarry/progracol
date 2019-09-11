@@ -19,7 +19,7 @@ class PagesController extends Controller {
             'data' => $tickets
         ]);
     }
-    public function register () {
+    /*public function register () {
         return view('register');
     }
     public function create (Request $request) {
@@ -31,5 +31,5 @@ class PagesController extends Controller {
             'inputregister4' => 'required|max:3'
         ]);
         return 'Exito!';//view('user');
-    }
+    }*/
 }
