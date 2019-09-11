@@ -11,7 +11,7 @@ class CreateTicketPriorityTable extends Migration {
      * @return void
      */
     public function up() {
-        Schema::create('ticket_priority', function (Blueprint $table) {
+        Schema::create('ticket_priorities', function (Blueprint $table) {
             $table->bigIncrements('priority_id');
             $table->timestamps();
 
@@ -26,6 +26,6 @@ class CreateTicketPriorityTable extends Migration {
      * @return void
      */
     public function down() {
-        Schema::dropIfExists('ticket_priority');
+        Schema::dropIfExists('ticket_priorities');
     }
 }

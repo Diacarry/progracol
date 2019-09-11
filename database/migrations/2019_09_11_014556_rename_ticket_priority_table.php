@@ -11,7 +11,7 @@ class RenameTicketPriorityTable extends Migration {
      * @return void
      */
     public function up() {
-        Schema::table('ticket_priority', function (Blueprint $table) {
+        Schema::table('ticket_priorities', function (Blueprint $table) {
             $table->index('priority_id');
         });
     }
@@ -22,7 +22,7 @@ class RenameTicketPriorityTable extends Migration {
      * @return void
      */
     public function down() {
-        Schema::table('ticket_priority', function (Blueprint $table) {
+        Schema::table('ticket_priorities', function (Blueprint $table) {
             $table->dropIndex('ticket_priority_id_index');
         });
     }

@@ -24,11 +24,11 @@
             </tr>
         </thead>
         <tbody>
-            @forelse($msgs as $msg)
+            @forelse($data as $msg)
                 <tr>
-                    <th>{{ $msg['id'] }}</th>
-                    <td>{{ $msg['content'] }}</td>
-                    <td>Mark</td>
+                    <th>{{ $msg['user_id'] }}</th>
+                    <td>{{ $msg['email'] }}</td>
+                    <td>{{ $msg['name'] }}</td>
                     <td>Otto</td>
                     <td>Hulk</td>
                 </tr>

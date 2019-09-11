@@ -11,7 +11,7 @@ class AddColumnsToTicketUserTable extends Migration {
      * @return void
      */
     public function up() {
-        Schema::table('ticket_user', function (Blueprint $table) {
+        Schema::table('ticket_users', function (Blueprint $table) {
             $table->index('user_id');
         });
     }
@@ -22,8 +22,8 @@ class AddColumnsToTicketUserTable extends Migration {
      * @return void
      */
     public function down() {
-        Schema::table('ticket_user', function (Blueprint $table) {
-            $table->dropIndex('ticket_user_user_id_index');
+        Schema::table('ticket_users', function (Blueprint $table) {
+            $table->dropIndex('ticket_users_user_id_index');
         });
     }
 }

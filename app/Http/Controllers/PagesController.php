@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\TicketUser;
 use App\TicketPriority;
 use Illuminate\Http\Request;
 
@@ -13,19 +14,9 @@ class PagesController extends Controller {
         ]);
     }
     public function tickets () {
-        $prueba = [
-            [
-                'id' => 1,
-                'content' => 'Misterio'
-            ],
-            [
-                'id' => 2,
-                'content' => 'Peligro'
-            ]
-        ];
-        //$tickets = TicketPriority::all();
+        $tickets = TicketUser::all();
         return view('ticket', [
-            'msgs' => []//$prueba
+            'data' => $tickets
         ]);
     }
 }

@@ -11,7 +11,7 @@ class CreateTicketUserTable extends Migration {
      * @return void
      */
     public function up() {
-        Schema::create('ticket_user', function (Blueprint $table) {
+        Schema::create('ticket_users', function (Blueprint $table) {
             $table->bigIncrements('user_id');
             $table->timestamps();
 
@@ -28,6 +28,6 @@ class CreateTicketUserTable extends Migration {
      * @return void
      */
     public function down() {
-        Schema::dropIfExists('ticket_user');
+        Schema::dropIfExists('ticket_users');
     }
 }
