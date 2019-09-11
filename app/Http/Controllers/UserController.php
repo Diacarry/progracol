@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\TicketUser;
 use Illuminate\Http\Request;
 
 class UserController extends Controller {
@@ -11,7 +12,10 @@ class UserController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        //
+        $Users = TicketUser::all();
+        return view('ticket', [
+            'data' => $Users
+        ]);
     }
 
     /**
@@ -20,7 +24,7 @@ class UserController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create() {
-        //
+        return view('register');
     }
 
     /**
@@ -30,7 +34,13 @@ class UserController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
-        //
+        $UserData = new TicketUser();
+        $UserData->name = $request->get('inputregister1');
+        $UserData->last_name = $request->get('inputregister2');
+        $UserData->email = $request->get('inputregister3');
+        $UserData->hours_days = $request->get('inputregister4');
+        $UserData->save();
+        return redirect('users');
     }
 
     /**

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\TicketUser;
-use App\TicketPriority;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller {
@@ -19,17 +18,7 @@ class PagesController extends Controller {
             'data' => $tickets
         ]);
     }
-    /*public function register () {
+    public function register () {
         return view('register');
     }
-    public function create (Request $request) {
-        //dd($request->all());
-        $request->validate([
-            'inputregister1' => 'required|max:50',
-            'inputregister2' => 'required|max:50',
-            'inputregister3' => 'required|max:100',
-            'inputregister4' => 'required|max:3'
-        ]);
-        return 'Exito!';//view('user');
-    }*/
 }

@@ -1,13 +1,17 @@
 @extends('layouts.blank')
 @section('content')
-    <h3>FORMULARIO -> <small><a href="/">Volver</a></small> </h3>
+    <h3>FORMULARIO -> <small><a href="/">Volver</a></small>|<small><a href="/users/create">CrearUsuario</a></small></h3>
     <form action="/users/{$id}">
         <div class="form-group row col-md-4">
         <label class="col-sm-2 col-form-label">User</label>
             <div class="col-sm-10">
-                <select id="inputState" class="form-control">
-                    <option selected>Choose...</option>
-                    <option>...</option>
+                <select id="select_a" class="form-control">
+                    <option selected>Elija un Usuario</option>
+                    @forelse($data as $dato)
+                        <option value="{{ $dato->email }}">{{ $dato->user_id }}. {{ $dato->name }}</option>
+                    @empty
+                        <option>NO HAY DATA</option>
+                    @endforelse
                 </select>
             </div>
         </div>
@@ -24,11 +28,11 @@
             </tr>
         </thead>
         <tbody>
-            @forelse($data as $msg)
+            @forelse($data as $info)
                 <tr>
-                    <th>{{ $msg['user_id'] }}</th>
-                    <td>{{ $msg['email'] }}</td>
-                    <td>{{ $msg['name'] }}</td>
+                    <th>{{ $info->user_id }}</th>
+                    <td>{{ $info->email }}</td>
+                    <td>{{ $info->name }}</td>
                     <td>Otto</td>
                     <td>Hulk</td>
                 </tr>
