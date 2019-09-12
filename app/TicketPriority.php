@@ -48,4 +48,21 @@ class TicketPriority extends Model {
      */
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
+    /**
+     * Vizualizacion de información almacenada en el modelo
+     * Dejar comentado en etapa de produccion a menos que
+     * este se requiera
+     */
+    /*$modelos = App\TicketUser::all();
+    foreach ($modelos as $modelo) {
+        echo $modelo->name;
+    }*/
+
+    /**
+     * The attributes that aren't mass assignable.
+     * Lista negra del modelo
+     *
+     * @var array
+     */
+    protected $guarded = [];
 }
