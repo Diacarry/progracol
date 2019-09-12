@@ -66,7 +66,10 @@ class TicketUser extends Model {
      */
     protected $guarded = [];
 
-    public function priorities () {
+    /**
+     * The TicketUser that belong to the TicketPriority.
+     */
+    public function TicketPriorities () {
         /* TableName de relacion 'ticket_priority_ticket_user' */
         return $this->belongsToMany('App\TicketPriority');
         /* TableName de relacion asignada como segundo parametro */
@@ -74,14 +77,22 @@ class TicketUser extends Model {
         /* Adicional enviar las llaves primarias del modelo que
            define y el modelo  al que se une */
         return $this->belongsToMany('App\TicketPriority', 'ticket_tickets', 'user_id', 'priority_id');
+        /* Para redefinir la variable 'pivot' y asignar el nombre deseado */
+        /*return $this->belongsToMany('App\TicketPriority')
+                ->as('NewNamePivot')
+                ->withTimestamps();*/
     }
 
     /**
      * Metodo para acceder a los ticket_priority desde ticket_user
      */
-    /*$user = App\TicketUser::find(1);
-    foreach ($user->priorities as $role) {
+    /*$users = App\TicketUser::find(1);
+    foreach ($users->priorities as $priority) {
         //
+    }*/
+    /*$users = App\TicketUser::find(1);
+    foreach ($users->priorities as $priority) {
+        echo $priority->pivot->created_at;
     }*/
     /**
      * Metodo para recorrer el modelo
