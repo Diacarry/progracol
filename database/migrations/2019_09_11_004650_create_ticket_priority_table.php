@@ -19,7 +19,6 @@ class CreateTicketPriorityTable extends Migration {
             $table->integer('time_to_solve');
         });
     }
-
     /**
      * Reverse the migrations.
      *

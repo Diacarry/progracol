@@ -21,7 +21,6 @@ class CreateTicketUserTable extends Migration {
             $table->integer('hours_days');
         });
     }
-
     /**
      * Reverse the migrations.
      *

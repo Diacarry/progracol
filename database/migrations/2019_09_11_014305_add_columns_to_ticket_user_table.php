@@ -15,7 +15,6 @@ class AddColumnsToTicketUserTable extends Migration {
             $table->index('user_id');
         });
     }
-
     /**
      * Reverse the migrations.
      *

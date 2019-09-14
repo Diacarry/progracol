@@ -71,9 +71,9 @@ class TicketUser extends Model {
      */
     public function TicketPriorities () {
         /* TableName de relacion 'ticket_priority_ticket_user' */
-        return $this->belongsToMany('App\TicketPriority');
+        //return $this->belongsToMany('App\TicketPriority');
         /* TableName de relacion asignada como segundo parametro */
-        return $this->belongsToMany('App\TicketPriority', 'ticket_tickets');
+        //return $this->belongsToMany('App\TicketPriority', 'ticket_tickets');
         /* Adicional enviar las llaves primarias del modelo que
            define y el modelo  al que se une */
         return $this->belongsToMany('App\TicketPriority', 'ticket_tickets', 'user_id', 'priority_id');

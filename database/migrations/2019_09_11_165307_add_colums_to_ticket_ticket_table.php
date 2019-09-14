@@ -15,7 +15,6 @@ class AddColumsToTicketTicketTable extends Migration {
             $table->index('ticket_id');
         });
     }
-
     /**
      * Reverse the migrations.
      *

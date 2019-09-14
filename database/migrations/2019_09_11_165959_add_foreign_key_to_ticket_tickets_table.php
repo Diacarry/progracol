@@ -19,7 +19,6 @@ class AddForeignKeyToTicketTicketsTable extends Migration {
             $table->foreign('fk_ticket_priorities')->references('priority_id')->on('ticket_priorities');
         });
     }
-
     /**
      * Reverse the migrations.
      *

@@ -15,7 +15,6 @@ class RenameTicketPriorityTable extends Migration {
             $table->index('priority_id');
         });
     }
-
     /**
      * Reverse the migrations.
      *
