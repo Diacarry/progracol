@@ -65,9 +65,8 @@ class TicketTicket extends Model {
      * @var array
      */
     protected $guarded = [];
-    /*$user = App\TicketUser::find(1);
-
-    foreach ($user->roles as $role) {
-        //
+    
+    /*public function ticketUsers () {
+        return $this->hasMany('App\TicketUser', 'ticket_users', 'ticket_id', 'usr_id');
     }*/
 }

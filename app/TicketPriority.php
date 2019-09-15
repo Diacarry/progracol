@@ -69,19 +69,14 @@ class TicketPriority extends Model {
     /**
      * The TicketPriority that belong to the TicketUser.
      */
-    //public function TicketUsers () {
-        /* TableName de relacion 'ticket_priority_ticket_user' */
-        //return $this->belongsToMany('App\TicketUser');
+    public function pivotTicketUsers () {
         /**
-         * Pivot es para acceder a los datos de la tabla intermedia
+         * Pivot es para acceder a los datos de la tabla de relacion entre los modelos
+         * Many to many
+         * belongsToMany('Model','tableRelations','foreignKeydelInvocador','foreignKeydel Invocado')
          */
+        return $this->belongsToMany('App\TicketUser', 'ticket_tickets', 'fk_ticket_priorities', 'fk_ticket_users');
         /* Add Columnas a la tabla derelacion entre TicketUser y TicketPriority */
         //return $this->belongsToMany('App\TicketUser')->withPivot('ticket_id','subjet', 'description','status');
-        /* Para mantener los nombres de variables created_at y updated_at usar withTimestamps */
-        //return $this->belongsToMany('App\TicketUser')->withTimestamps();
-        /* Para redefinir la variable 'pivot' y asignar el nombre deseado */
-        /*return $this->belongsToMany('App\TicketPriority')
-                ->as('NewNamePivot')
-                ->withTimestamps();*/
-    //}
+    }
 }

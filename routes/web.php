@@ -20,4 +20,15 @@ Route::get('/tickets', 'PagesController@tickets');
 Route::get('/register', 'PagesController@register');
 
 Route::resource('/users', 'UserController');
-//Route::post('/register/create', 'PagesController@create');
+
+Route::get('/databaseUser', function () {
+    $user = App\TicketUser::first();
+    foreach ($user->pivotTicketPriorities as $role) {}
+    return $user;
+});
+
+Route::get('/databasePriority', function () {
+    $user = App\TicketPriority::first();
+    foreach ($user->pivotTicketUsers as $role) {}
+    return $user;
+});
